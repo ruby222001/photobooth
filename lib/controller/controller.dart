@@ -138,6 +138,8 @@ class PhotoController extends GetxController {
   void clearAll() {
     images.value = [null, null, null, null];
     activeSlot.value = 0;
+    stickers.clear();
+    stickerHistory.clear();
   }
 
   Future<bool> requestStoragePermission() async {

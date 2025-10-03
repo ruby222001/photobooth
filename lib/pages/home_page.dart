@@ -67,6 +67,11 @@ class HomePage extends StatelessWidget {
                   onTap: () => controller.undoSticker(),
                 ),
                 BottomActionButton(
+                  icon: Icons.camera_alt_outlined,
+                  color: Colors.pink.shade400,
+                  onTap: () async => await controller.takePhotoSequence(),
+                ),
+                BottomActionButton(
                   icon: Icons.downloading_sharp,
                   color: Colors.pink.shade400,
                   onTap: () async => await controller.downloadPhoto(),
@@ -75,11 +80,6 @@ class HomePage extends StatelessWidget {
                   icon: Icons.switch_camera_outlined,
                   color: Colors.pink.shade400,
                   onTap: () async => await controller.switchCamera(),
-                ),
-                BottomActionButton(
-                  icon: Icons.camera_alt_outlined,
-                  color: Colors.pink.shade400,
-                  onTap: () async => await controller.takePhotoSequence(),
                 ),
               ],
             ),
@@ -132,15 +132,23 @@ class HomePage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(12),
                                     border: Border.all(color: Colors.pink),
                                   ),
-                                  child: image != null
-                                      ? ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          child: Image.file(image,
-                                              fit: BoxFit.cover),
-                                        )
-                                      : Center(
-                                          child: Image.asset("assets/add.jpg")),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(12),
+                                    child: image != null
+                                        ? Image.file(image,
+                                            fit: BoxFit.cover) // Captured image
+                                        : (controller.cameraController !=
+                                                    null &&
+                                                controller.cameraController!
+                                                    .value.isInitialized &&
+                                                controller.activeSlot.value ==
+                                                    index
+                                            ? CameraPreview(controller
+                                                .cameraController!) // live camera
+                                            : Image.asset("assets/add.jpg",
+                                                fit: BoxFit
+                                                    .cover)), // placeholder
+                                  ),
                                 ),
                               );
                             },

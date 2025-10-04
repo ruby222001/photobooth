@@ -2,4 +2,4 @@
 
 
 
-![Screenshot_2025-10-04-10-34-43-419_com gallery player](https://github.com/user-attachments/assets/c6f7ed62-99c0-4b55-af97-1fa1475853f0)
+<img width="339" height="694" alt="image" src="https://github.com/user-attachments/assets/045ddb8d-051e-439f-9d8a-e638cef6ee22" />

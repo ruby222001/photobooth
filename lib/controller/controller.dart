@@ -53,31 +53,30 @@ class PhotoController extends GetxController {
   }
 
   void loadInterAd() {
-    final ad = BannerAd(
-      adUnitId: AdHelper.bannerInterstatialUnitId,
+    InterstitialAd.load(
+      adUnitId: AdHelper.bannerInterstatialUnitId, // your interstitial unit ID
       request: AdRequest(),
-      size: AdSize.banner,
-      listener: BannerAdListener(
+      adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) {
-          interstitialAd = ad as InterstitialAd;
-          isinterLoaded.value = true; // ✅ triggers UI update
-          print("Banner Ad Loaded");
+          interstitialAd = ad;
+          isinterLoaded.value = true;
+          print("Interstitial Ad Loaded");
         },
-        onAdFailedToLoad: (ad, err) {
-          print('Failed to load banner ad: ${err.message}');
-          ad.dispose();
+        onAdFailedToLoad: (err) {
+          print("Failed to load interstitial ad: ${err.message}");
         },
       ),
     );
-    ad.load();
   }
 
   void showInterstitialAd() {
+    if (!isinterLoaded.value) return;
+
     interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
       onAdDismissedFullScreenContent: (ad) {
         ad.dispose();
         isinterLoaded.value = false;
-        loadInterAd(); // load again for next time
+        loadInterAd(); // reload for next time
       },
       onAdFailedToShowFullScreenContent: (ad, error) {
         ad.dispose();
@@ -85,6 +84,7 @@ class PhotoController extends GetxController {
         loadInterAd();
       },
     );
+
     interstitialAd.show();
   }
 

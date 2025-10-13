@@ -18,14 +18,11 @@ class BottomActionButton extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(12)
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-          child: Icon(
-            icon,
-            color: Colors.white,
-          ),
+          child: Icon(icon, color: Colors.white),
         ),
       ),
     );

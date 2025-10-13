@@ -62,7 +62,10 @@ class HomePage extends StatelessWidget {
                 BottomActionButton(
                   icon: Icons.replay,
                   color: Colors.pink.shade400,
-                  onTap: () => controller.clearAll(),
+                  onTap: () {
+                    controller.clearAll();
+                    controller.showInterstitialAd();
+                  },
                 ),
                 BottomActionButton(
                   icon: Icons.undo,
@@ -79,10 +82,6 @@ class HomePage extends StatelessWidget {
                   color: Colors.pink.shade400,
                   onTap: () async {
                     await controller.downloadPhoto();
-
-                    if (controller.isinterLoaded.value) {
-                      controller.showInterstitialAd();
-                    }
                   },
                 ),
                 // BottomActionButton(

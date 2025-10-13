@@ -90,12 +90,21 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
+<<<<<<< HEAD
             VALUE "FileDescription", "photoboothapp" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "photoboothapp" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "photoboothapp.exe" "\0"
             VALUE "ProductName", "photoboothapp" "\0"
+=======
+            VALUE "FileDescription", "photoboothapp_new" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "photoboothapp_new" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "photoboothapp_new.exe" "\0"
+            VALUE "ProductName", "photoboothapp_new" "\0"
+>>>>>>> 36bdeb39acab318dff21153c2311b99b90d97898
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

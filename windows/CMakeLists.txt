@@ -1,10 +1,18 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
+<<<<<<< HEAD
 project(photoboothapp LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "photoboothapp")
+=======
+project(photoboothapp_new LANGUAGES CXX)
+
+# The name of the executable created for the application. Change this to change
+# the on-disk name of your application.
+set(BINARY_NAME "photoboothapp_new")
+>>>>>>> 36bdeb39acab318dff21153c2311b99b90d97898
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

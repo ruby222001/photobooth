@@ -13,7 +13,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
+<<<<<<< HEAD
 	<string>photoboothapp</string>
+=======
+	<string>photoboothapp_new</string>
+>>>>>>> 36bdeb39acab318dff21153c2311b99b90d97898
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "photoboothapp",
     "short_name": "photoboothapp",
+=======
+    "name": "photoboothapp_new",
+    "short_name": "photoboothapp_new",
+>>>>>>> 36bdeb39acab318dff21153c2311b99b90d97898
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

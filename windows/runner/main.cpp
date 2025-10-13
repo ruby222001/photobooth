@@ -27,7 +27,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
   Win32Window::Size size(1280, 720);
+<<<<<<< HEAD
   if (!window.Create(L"photoboothapp", origin, size)) {
+=======
+  if (!window.Create(L"photoboothapp_new", origin, size)) {
+>>>>>>> 36bdeb39acab318dff21153c2311b99b90d97898
     return EXIT_FAILURE;
   }
   window.SetQuitOnClose(true);

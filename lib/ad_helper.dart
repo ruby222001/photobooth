@@ -12,7 +12,7 @@ class AdHelper {
   }
 
     static String get bannerInterstatialUnitId {
-    if (Platform.isIOS) {
+    if (Platform.isAndroid) {
       return 'ca-app-pub-3940256099942544/1033173712';
     } else if (Platform.isIOS) {
       return 'ca-app-pub-4067749124990821/5616131320';
